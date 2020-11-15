@@ -7,14 +7,28 @@
     <groupId>br.com.wellingtoncosta</groupId>
     <artifactId>spark-java-api-example</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <repositories>
+        <repository>
+            <id>MavenCentral</id>
+            <name>MavenCentral</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+        <repository>
+            <id>ipgeolocation</id>
+            <name>ipgeolocation</name>
+            <url>http://dl.bintray.com/ipgeolocation/ipgeolocation</url>
+        </repository>
+    </repositories>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.9</source>
-                    <target>1.9</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -27,19 +41,14 @@
             <version>2.6.0</version>
         </dependency>
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>5.2.11.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.1.4</version>
-        </dependency>
-        <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.8.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.ipgeolocation</groupId>
+            <artifactId>ipgeolocation</artifactId>
+            <version>1.0.12</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
