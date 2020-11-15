@@ -3,14 +3,14 @@ package sample.geolocation.external;
 import io.ipgeolocation.api.Geolocation;
 import io.ipgeolocation.api.GeolocationParams;
 import io.ipgeolocation.api.IPGeolocationAPI;
+import sample.geolocation.config.Environment;
 
 public class IPGeolocation implements RestClientGeolocationService {
 
-    private static String API_KEYS = "27dad66cbcae470f8d5b91ca66461165";
     public IPGeolocation() {}
 
     public sample.geolocation.domain.Geolocation geolocate(String ipaddress) {
-        IPGeolocationAPI api = new IPGeolocationAPI(API_KEYS);
+        IPGeolocationAPI api = new IPGeolocationAPI(Environment.getConfig().getGeolocationAPIKey());
 
         GeolocationParams geoParams = new GeolocationParams();
         geoParams.setIPAddress(ipaddress);
