@@ -1,7 +1,5 @@
 package sample.geolocation.config;
 
-import java.util.Optional;
-
 public class Environment {
     public static String GEO_KEY = "geo_key";
     private static String ENV = "env";
