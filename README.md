@@ -23,7 +23,7 @@ https://github.com/spidercatte/spark-java-rest-api.git
 
 1. Sig-up with ipgeolocation.io to get a valid api key
 2. Run `mvn install` then `mvn clean package` to generate the package
-3. Run `mvn exec:java -Dexec.mainClass="App" -Denv=dev -Dgeo_key=yourKey`
+3. Run `mvn exec:java -Denv=dev -Dgeo_key=yourKey`
 
 ## Acknowledgments
 
