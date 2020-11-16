@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>br.com.wellingtoncosta</groupId>
-    <artifactId>spark-java-api-example</artifactId>
+    <groupId>sample.geolocation</groupId>
+    <artifactId>sample-geolocation</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <repositories>
@@ -18,6 +18,11 @@
             <id>ipgeolocation</id>
             <name>ipgeolocation</name>
             <url>http://dl.bintray.com/ipgeolocation/ipgeolocation</url>
+        </repository>
+        <repository>
+            <id>sparkswagger</id>
+            <name>sparkswagger</name>
+            <url>https://packagecloud.io/manusant/beerRepo/maven2</url>
         </repository>
     </repositories>
 
@@ -51,6 +56,16 @@
             <version>1.0.12</version>
         </dependency>
         <dependency>
+            <groupId>com.github.seancfoley</groupId>
+            <artifactId>ipaddress</artifactId>
+            <version>5.3.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.beerboy.ss</groupId>
+            <artifactId>spark-swagger</artifactId>
+            <version>1.0.0.48</version>
+        </dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.8.0-alpha2</version>
@@ -59,6 +74,12 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>1.8.0-alpha2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

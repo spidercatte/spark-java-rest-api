@@ -16,6 +16,9 @@ public class GeolocationRoute {
     public static void configureRoutes(Gson gson) {
         path("/api/geolocate", () -> {
             get("/:ip_addresss", (request, response) -> service.findByIpAddress(request), gson::toJson);
+            //exception(IllegalStateException.class, (exception, request, response) -> {
+            //    // Handle the exception here
+            //});
         });
     }
 }

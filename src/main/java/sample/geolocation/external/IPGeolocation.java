@@ -1,5 +1,6 @@
 package sample.geolocation.external;
 
+import inet.ipaddr.IPAddress;
 import io.ipgeolocation.api.Geolocation;
 import io.ipgeolocation.api.GeolocationParams;
 import io.ipgeolocation.api.IPGeolocationAPI;
@@ -16,6 +17,10 @@ public class IPGeolocation implements RestClientGeolocationService {
         geoParams.setIPAddress(ipaddress);
 
         Geolocation geolocation = api.getGeolocation(geoParams);
+
+        if(geolocation.getStatus() != 200) {
+            throw new IllegalStateException(String.format("Status Code: %d, Message: %s\n", geolocation.getStatus(), geolocation.getMessage()));
+        }
 
         return new sample.geolocation.domain.Geolocation(
                 geolocation.getCountryName(),
